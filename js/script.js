@@ -1,8 +1,27 @@
 // task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+const sportsCanada = prompt('Какой национальный вид спорта Канады: 1) Боулинг; 2) Баскетбол; 3)Футбол; 4)Лакросс;');
+if (sportsCanada == 'Баскетбол' || sportsCanada == 'Футбол' || sportsCanada == 'Боулинг') {
+    alert('no');
+} else if (sportsCanada == 'Лакросс') {
+    alert('yes!!!')}
 
+
+// task #2
+
+let numOrStr = prompt('input number or string');
+console.log(numOrStr)
+
+switch (true) {
+    case (numOrStr === null):
+        console.log('ви скасували')
+        break;
+    case (numOrStr.trim() === ''):
+        console.log('Empty String')
+        break;
+    case isNaN( +numOrStr):
+        console.log(' number is Ba_NaN')
+        break;
+    default:
+        console.log('OK!');
+}
 
