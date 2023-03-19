@@ -50,7 +50,7 @@ const triangleA = prompt('Введите длину первой стороны 
 const triangleB = prompt('Введите длину второй стороны треугольника')
 const triangleC = prompt('Введите длину третьей стороны треугольника')
 
-if (triangleA + triangleB > triangleC && triangleB + triangleC > triangleA && triangleA + triangleC > triangleB) {
+if (((triangleA + triangleB) > triangleC) || ((triangleB + triangleC) > triangleA) || ((triangleA + triangleC) > triangleB)) {
     alert('Треугольнику быть')
 } else {
     alert('Учи математику')}
