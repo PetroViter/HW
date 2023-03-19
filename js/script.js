@@ -10,3 +10,5 @@ if (age == 11) {
 } else {
     alert('Вам ' + age + ' лет')
 }
+
+console.log (isNaN(age))
