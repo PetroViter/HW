@@ -1,5 +1,5 @@
-let x = 4;
-let y = 9;
+const x = 4;
+const y = 9;
 const R = 10;
 
 const A = Math.sqrt(x*x + y*y)
