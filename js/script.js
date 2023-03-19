@@ -1,8 +1,19 @@
 // task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+let x = 10, y = 7;
+
+console.log((x > y) ? 'x больше, чем y' : 'x больше, чем y');
+
+// task #2
+
+const num = +prompt('Введите число')
+
+<<<<<<< Updated upstream
+if (num % 2 == 0) {
+    alert('Число ' + num + ' четное')
+} else {
+    alert('Число ' + num + ' нечетное')
 
 
+// task #3
+
+const number = +prompt('Введите целое число')
