@@ -1,8 +1,12 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+const age = prompt('Сколько Вам лет?')
+const decl = age % 10;
 
-
+if (age == 11) {
+    alert('Вам ' + age + ' лет')
+} else if (decl === 1) {
+    alert('Вам ' + age + ' год')
+} else if (decl >= 2 && decl <= 4) {
+    alert('Вам ' + age + ' года')
+} else {
+    alert('Вам ' + age + ' лет')
+}
