@@ -1,44 +1,42 @@
 'use strict'
-/*Шаги выполнения:
-При загрузке страницы нужно показать пользователю окно, в котором спросить его год рождения.
-Когда он введет его и нажмет ОК, спросить у него, в каком городе он живет.
-При удачном ра  складе показать ему еще одно окно, где спросить его любимый вид спорта.
-При нажатии на ОК показываем ему окно, где должна быть отображена следующая информация:
-Его возраст.
-Если пользователь введет Киев, Москва или Минск, то показать ему сообщение – “Ты живешь в столице …” и на место точек подставляем страну, столицу которой он ввел. Иначе показываем ему “ты живешь в городе …” и на место точек – введенный город.
-Выбираем сами три вида спорта и три чемпиона в этих видах. Соответственно, если пользователь введет один из этих видов спорта, то показываем ему сообщение “Круто! Хочешь стать …” и подставляем на место точек имя и фамилию чемпиона.
-
-
-Всё это должно быть отображено в одном окне.
-
-Если в каком-то из случаев он не захочет вводить информацию и нажмет Отмена, показать ему сообщение – “Жаль, что Вы не захотели ввести свой(ю) …” и указываем, что он не захотел вводить – дату рождения, город или вид спорта.*/
-
 const age = +prompt('Enter your years of birth');
-console.log('your years of birth ' + age);
-if (age !== 0) {
-    let city = prompt('what city do you live in?');
-    console.log('Do you live in ' + city);
-    if (city !== null) {
-        let sport = prompt('What is your favorite sport?');
-        console.log('your favorite sport is' + ' ' + sport);
-        if (sport === null) {
-            alert('Жаль, что Вы не захотели ввести свой любимый вид спорта')
-        } else if (sport !== null) {
-            alert('you are ' + (2023 - age) + ' years old \nCool! Do you want to be like ' + champion.indexOf(sport))
-        } else if (sport !== null) {
-            alert('you are ' + (2023 - age) + ' years old \nYour favorite sport is ' + sport)
-        }
-    }  else { alert('Жаль, что Вы не захотели ввести свой город, где живете')
-    }
-} else { alert('Жаль, что Вы не захотели ввести свой год рождения')
+if (age == ' ') {
+    alert('Жаль, что Вы не захотели ввести свой год рождения')
+} else (document.write('You are ' + (2023 - age) + ' years old.'));
+
+const city = prompt('What city do you live in?');
+switch (city) {
+    case 'Kyiv':
+        document.write('\n You live in the capital of Ukraine.');
+        break;
+    case 'Berlin':
+        document.write(' \n You live in the capital of Germany.');
+        break;
+    case 'London':
+        document.write(' \n You live in the capital of England.');
+        break;
+    case null:
+        alert('Жаль, что Вы не захотели ввести свой город, где живете');
+        break;
+    default:
+        document.write('\n You live in ' + city + '.')
+        break;
 }
 
-const info = alert()
-
-
-//what city do you live in?
-//'Do you live in' + ' ' +  if (sport !== null) {
-//             alert('your age is ' + (2023 - age))
-//
-//
-//         }
+const champion = prompt('What is your favorite sport?');
+switch (champion) {
+    case 'Football':
+        document.write('\n Do you want to be like Messi.');
+        break;
+    case 'Hockey':
+        document.write('\n Do you want to be like Jaromir Jagr.');
+        break;
+    case 'Basketball':
+        document.write('\n Do you want to be like Jordan.');
+        break;
+    case null:
+        alert('Жаль, что Вы не захотели ввести свой любимый вид спорта.');
+        break;
+    default:
+        document.write('\n Your favorite sport is ' + champion + '.');
+}
