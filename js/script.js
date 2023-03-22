@@ -1,8 +1,9 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+'use strict'
+function padString (str, num, sym, bul) {
+    str = String;
+    num = str.length;
+    sym = ' ';
+    bul = Boolean;
+}
 
-
+console.log(padString ('Hallo', 5, '*', false))
