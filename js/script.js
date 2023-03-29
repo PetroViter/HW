@@ -1,8 +1,19 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+const arr = [1, 2, 3, -1, -2, -3]
+
+const m = (arr) => {
+    let exampleArr = []
+    if (arr.length === 0) return 'Ошибка'
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] > 0) {
+            exampleArr.push(arr[i])
+        }
+    }
+    if (exampleArr != null) return exampleArr
+        else return null
+}
+
+m(arr)
+
+
 
 
