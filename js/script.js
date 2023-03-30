@@ -1,8 +1,15 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+const litersOfBorscht = prompt('Введите количество борща в литрах');
+const weightOfP = 0.075;
+const quantityPerLiter = 4;
+const priceOfP = 13;
+const sum = (capacity, weight, quantityLiter, price ) => {
+    let results  = quantityLiter * weight * capacity * price;
+    if (Number(litersOfBorscht)) return Math.ceil(results);
+}
+sum(quantityPerLiter, weightOfP, litersOfBorscht, priceOfP)
+
+
+
+
 
 
