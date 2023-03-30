@@ -4,7 +4,7 @@ const arrayNumber = (arr) => {
     let exampleArr = []
     if (arr.length === 0) return 'Ошибка'
     for (let i = 0; i <= arr.length; i++) {
-        if (arr[i] === 0) {
+        if (arr[i] > 0) {
             exampleArr.push(arr[i])
         }
     }
