@@ -9,9 +9,8 @@ const arrayNumber = (arr) => {
         }
     }
     if (exampleArr !== null) return exampleArr
-        else {
         return null
-    }
+
 }
 arrayNumber(arr);
 
