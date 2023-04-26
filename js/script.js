@@ -62,3 +62,4 @@ console.log(balanceMin2000);
 const sumBalanceUsers = (salaries) => salaries.reduce((acc, sum) =>
     acc + sum.balance.replace(/[^0-9.]/g , '') * 100/100, 0)
 sumBalanceUsers(users)
+
