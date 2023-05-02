@@ -1,8 +1,14 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+const flat = (...arr) => {
+    const newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        const elem = arr[i];
+        if (Array.isArray(elem)) {
+            newArr.push(...flat(...elem));
+        } else {
+            newArr.push(elem);
+        }
+    }
+    return newArr;
+}
 
-
+console.log(flat([['a', 'b', [1, 2, 3], [4, 5]], ['d', ['e', 'f']]]));
