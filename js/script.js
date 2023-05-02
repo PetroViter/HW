@@ -1,8 +1,22 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+'use strict'
 
+void function () {
+    const generateNumberRandom = () => {
+        const arrRandomNum = [];
+        const generatorNum = () => {
+            const randomNum = Math.floor(Math.random()*100) + 1;
+            if(arrRandomNum.includes(randomNum)) {
+                return generatorNum()
+            } arrRandomNum.push(randomNum);
+            return arrRandomNum;
+        }
+
+        return generatorNum
+    }
+    const numGeneratorInstance  = generateNumberRandom();
+    for (let i = 0; i < 100; i++) {
+        const res = numGeneratorInstance();
+        console.log(res)
+    }
+}()
 
