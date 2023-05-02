@@ -1,8 +1,11 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
-
-
+function number (){
+    let b = 0;
+    return function (x) {
+        b += x;
+        return b;
+        }
+}
+const sum = number();
+sum(5);
+sum(10);
+sum(5);
