@@ -1,8 +1,12 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
+for (let li of document.querySelectorAll('li')) {
+        console.log(li);
+}
 
+const li = document.querySelectorAll('li')
+console.log(li.length);
 
+const arrLi = [];
+for (let i = 0; i < li.length; i++) {
+    arrLi[i] = li[i].textContent;
+}
+console.log(arrLi)
