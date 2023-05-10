@@ -1,8 +1,18 @@
-// task #1
-console.log(Boolean(Number('10') + 1 )) //true
-console.log('sub ' + Number(false)) //sub 0
-console.log(16 * `     91        `)// 1456
-console.log(true-70)//-69
-console.log(Number(1 + String(1)) + 1) // 12
-
-
+const createTable = (line, column ) => {
+    const table = document.createElement('table')
+    for (let i = 0; i < line; i++) {
+        const tr = document.createElement('tr')
+        for (let j = 1; j <= column; j++) {
+            const td = document.createElement('td');
+            td.textContent = i * line + j;
+            tr.appendChild(td);
+            td.style.border  = '1px solid black';
+            td.style.padding = '10px';
+        }
+        table.appendChild(tr);
+    }
+    table.style.borderCollapse = 'collapse';
+    table.style.textAlign = 'center';
+    document.body.appendChild(table);
+}
+createTable(10, 10);
